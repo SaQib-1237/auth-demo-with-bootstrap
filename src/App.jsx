@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Login from "./Components/Login/Login";
 import Register from "./Components/Register/register";
@@ -23,9 +23,15 @@ function App() {
 				<Route
 					path="*"
 					element={
-						<h1 style={{ color: "red", textAlign: "center" }}>
-							Page Not Found :(
-						</h1>
+						<div className="text-center p-3">
+							<h1 style={{ color: "red", textAlign: "center" }}>
+								Page Not Found :(
+							</h1>
+
+							<Link to="/">
+								<button className="btn btn-success">Back to home</button>
+							</Link>
+						</div>
 					}
 				/>
 			</Routes>
